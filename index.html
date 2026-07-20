@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Minds | Financial Literacy for Middle Schoolers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#C4E5F3', /* Market Minds Light Blue Accent */
+                            dark: '#0F172A',  /* Dark Slate for contrast */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-2 bg-slate-900 p-2 rounded-xl">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPmkSIqZmqr__OA_3CApZs-2OBxsBdHpA34SZaBkbl2YLKg2xKnoy0UUM29DNuWdRVesi_ERpEghaaMDhkU3tYeJHTqejHNvKgcLL5krliTaYGX3wx4Hjz1yPdZM-U8u63T8ha9jCiC62_b17nmEpc=w2495-h393-s-no-gm?authuser=0" alt="Market Minds Logo" class="h-8 w-auto object-contain">
+                <span class="text-white font-heading font-bold text-sm sm:text-base pr-1 hidden sm:inline">Market Minds</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-slate-900 transition-colors">Home</a>
+                <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
+                <a href="#workshops" class="hover:text-slate-900 transition-colors">What Kids Learn</a>
+                <a href="#team" class="hover:text-slate-900 transition-colors">Our Team</a>
+                <a href="#faq" class="hover:text-slate-900 transition-colors">FAQ</a>
+                <a href="#register" class="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition-all">Sign Up</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-600 font-medium">Home</a>
+            <a href="#about" class="block py-2 text-slate-600 font-medium">About</a>
+            <a href="#workshops" class="block py-2 text-slate-600 font-medium">What Kids Learn</a>
+            <a href="#team" class="block py-2 text-slate-600 font-medium">Our Team</a>
+            <a href="#faq" class="block py-2 text-slate-600 font-medium">FAQ</a>
+            <a href="#register" class="block text-center bg-slate-900 text-white py-2.5 rounded-xl font-semibold">Sign Up</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-[#C4E5F3]/30 via-transparent to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 tracking-tight leading-tight">
+                    Helping Students Build Lifelong Money Skills
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                    Free, interactive financial literacy workshops designed for students entering Grades 5–8.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                    <a href="#register" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold text-base hover:bg-slate-800 shadow-md transition-all text-center">Register For A Workshop</a>
+                    <a href="#about" class="bg-white text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-semibold text-base hover:bg-slate-50 transition-all text-center">Learn More About Us</a>
+                </div>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="rounded-2xl bg-slate-100 p-3 shadow-sm border border-slate-200">
+                    <div class="aspect-[4/3] w-full rounded-xl bg-slate-200 flex flex-col items-center justify-center text-slate-500 p-6 text-center border-2 border-dashed border-slate-300">
+                        <i class="fa-solid fa-users text-4xl mb-2 text-slate-400"></i>
+                        <p class="font-medium text-sm">[ Place Your Market Minds Team Group Photo Here ]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <div class="space-y-4 text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">Who We Are</h2>
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                    Market Minds is a student-led nonprofit organization. We started as a high school economics club and grew into a broader program focused on improving financial literacy among younger youth. We want to make sure practical money skills are accessible to everyone early on.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-heading font-bold text-slate-900">Our Story</h3>
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                        We noticed that many middle school students never get the opportunity to learn practical money habits like budgeting, saving, or understanding basic expenses before they hit high school. 
+                    </p>
+                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                        That is why we launched our Youth Financial Literacy Program. Because we are students ourselves, we know how to explain these concepts in a way that is simple, keeps kids interested, and skips the dry lectures.
+                    </p>
+                </div>
+                <div>
+                    <div class="aspect-video w-full rounded-xl bg-slate-200 flex flex-col items-center justify-center text-slate-500 p-4 text-center border-2 border-dashed border-slate-300">
+                        <i class="fa-solid fa-laptop-code text-3xl mb-2 text-slate-400"></i>
+                        <p class="font-medium text-xs">[ Place Photo of High School Club Meeting Here ]</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-12 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center space-y-2">
+                    <div class="text-3xl font-bold text-slate-900">Only 1 in 4</div>
+                    <p class="text-xs sm:text-sm text-slate-600">Students receive comprehensive personal finance education in school.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center space-y-2">
+                    <div class="text-3xl font-bold text-slate-900">Age 7</div>
+                    <p class="text-xs sm:text-sm text-slate-600">Is when basic financial habits and spending behaviors begin to form.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 text-center space-y-2">
+                    <div class="text-3xl font-bold text-slate-900">Early Start</div>
+                    <p class="text-xs sm:text-sm text-slate-600">Learning about money early leads to less debt and smarter choices later in life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workshops" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">What Your Child Will Learn</h2>
+                <p class="text-slate-600 text-sm sm:text-base">We use simple language and interactive examples to help students understand four core ideas:</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3 shadow-sm">
+                    <div class="w-10 h-10 bg-[#C4E5F3] rounded-lg flex items-center justify-center text-slate-800 text-base font-bold">1</div>
+                    <h3 class="text-lg font-heading font-bold text-slate-900">Needs vs. Wants</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Learning how to prioritize essential items over things that are just fun to buy.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3 shadow-sm">
+                    <div class="w-10 h-10 bg-[#C4E5F3] rounded-lg flex items-center justify-center text-slate-800 text-base font-bold">2</div>
+                    <h3 class="text-lg font-heading font-bold text-slate-900">Budgeting</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        How to create a basic plan for money so they understand how to track spending.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3 shadow-sm">
+                    <div class="w-10 h-10 bg-[#C4E5F3] rounded-lg flex items-center justify-center text-slate-800 text-base font-bold">3</div>
+                    <h3 class="text-lg font-heading font-bold text-slate-900">Saving</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Why putting money away early matters, and how to set a realistic goal to buy something they want.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 space-y-3 shadow-sm">
+                    <div class="w-10 h-10 bg-[#C4E5F3] rounded-lg flex items-center justify-center text-slate-800 text-base font-bold">4</div>
+                    <h3 class="text-lg font-heading font-bold text-slate-900">Smart Spending</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                        Recognizing daily sales tricks, comparing prices, and understanding choices before spending.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <h2 class="text-3xl font-heading font-bold text-slate-900 text-center">What Makes These Workshops Work</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex items-start gap-3">
+                    <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base">Practical Examples</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">We teach concepts through things middle schoolers actually care about, like cell phone plans or video games.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex items-start gap-3">
+                    <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base">Interactive Activities</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Instead of listening to lectures, kids play budget simulations and make real-time decisions.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex items-start gap-3">
+                    <i class="fa-solid fa-check text-emerald-600 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base">Student-Led Environment</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm">Being taught by responsible high school students makes the setting feel approachable and less like regular school.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">Meet Our Team</h2>
+                <p class="text-slate-600 text-sm sm:text-base">The high school students organizing and running the program.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-slate-200 rounded-xl p-5 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-slate-200 mx-auto border-2 border-[#C4E5F3] flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 text-base">Annie Shi</h3>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Founder & President</p>
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">Started Market Minds to help younger students build confidence with money early on.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-xl p-5 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-slate-200 mx-auto border-2 border-[#C4E5F3] flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 text-base">Sriya Donthiri</h3>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Director of Youth Literacy</p>
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">Focuses on building the workshop lessons to ensure they stay clear, simple, and active.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-xl p-5 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-slate-200 mx-auto border-2 border-[#C4E5F3] flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 text-base">Ava</h3>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Marketing Coordinator</p>
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">Handles community outreach and works directly with parents, libraries, and school partners.</p>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-xl p-5 text-center space-y-3">
+                    <div class="w-20 h-20 rounded-full bg-slate-200 mx-auto border-2 border-[#C4E5F3] flex items-center justify-center text-slate-400">
+                        <i class="fa-solid fa-user text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-slate-900 text-base">Sara</h3>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Director of Growth</p>
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">Helps map out long-term plans so we can take our workshops to more cities and communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">How the Sessions Work</h2>
+                <p class="text-slate-600 text-sm sm:text-base">We don't expect kids to just sit and stare at a screen. Here is how we break up our time:</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4 items-center">
+                    <span class="font-bold text-slate-400 text-lg">01</span>
+                    <p class="text-slate-700 text-sm"><strong class="text-slate-950 font-semibold">Quick Icebreakers:</strong> Simple, fast-paced games to get kids comfortable talking and collaborating with the group.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4 items-center">
+                    <span class="font-bold text-slate-400 text-lg">02</span>
+                    <p class="text-slate-700 text-sm"><strong class="text-slate-950 font-semibold">Real Examples:</strong> We explain concepts with stories and scenario cards that actually make sense to a 5th-8th grader.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4 items-center">
+                    <span class="font-bold text-slate-400 text-lg">03</span>
+                    <p class="text-slate-700 text-sm"><strong class="text-slate-950 font-semibold">Budget Simulations:</strong> Kids run through a game where they get a specific profile, manage an income, and make trade-offs.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4 items-center">
+                    <span class="font-bold text-slate-400 text-lg">04</span>
+                    <p class="text-slate-700 text-sm"><strong class="text-slate-950 font-semibold">Reflection & Goals:</strong> We end by letting them write down a small, actionable money goal they can practice immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="text-center space-y-2 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-heading font-bold text-slate-900">Sign Up For A Workshop</h2>
+                <p class="text-slate-600 text-sm sm:text-base">Choose whichever option works best for your schedule below.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 flex flex-col justify-between space-y-6 shadow-sm">
+                    <div class="space-y-3">
+                        <div class="inline-block bg-slate-900 text-white font-bold text-xs px-2.5 py-1 rounded-md uppercase tracking-wide">Option 1</div>
+                        <h3 class="text-xl font-heading font-bold text-slate-900">Register for the Next Live Workshop</h3>
+                        <p class="text-xs text-slate-600">Secure a spot for your child in our upcoming virtual weekend intensive session.</p>
+                        
+                        <div class="space-y-1.5 pt-2 text-xs sm:text-sm text-slate-700 border-t border-slate-100">
+                            <p><i class="fa-solid fa-calendar w-5 text-slate-400"></i> <strong>Date:</strong> July 25-26, 2026</p>
+                            <p><i class="fa-solid fa-clock w-5 text-slate-400"></i> <strong>Time:</strong> 10:00 AM – 12:30 PM EST</p>
+                            <p><i class="fa-solid fa-video w-5 text-slate-400"></i> <strong>Platform:</strong> Google Meet (Online)</p>
+                            <p><i class="fa-solid fa-tag w-5 text-slate-400"></i> <strong>Cost:</strong> 100% Free</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-slate-50 border border-dashed border-slate-300 rounded-xl h-60 flex flex-col items-center justify-center p-4 text-center text-slate-400">
+                        <i class="fa-solid fa-wpforms text-2xl mb-1 text-slate-300"></i>
+                        <span class="text-xs font-semibold text-slate-700">[ Live Session Google Form Embed ]</span>
+                        <p class="text-[11px] text-slate-400 mt-1 max-w-[200px]">Paste your current workshop's specific responsive form iframe code here.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between space-y-6 shadow-sm">
+                    <div class="space-y-3">
+                        <div class="inline-block bg-[#C4E5F3] text-slate-900 font-bold text-xs px-2.5 py-1 rounded-md uppercase tracking-wide">Option 2</div>
+                        <h3 class="text-xl font-heading font-bold text-slate-900">Join Our Future Interest List</h3>
+                        <p class="text-xs text-slate-600">Can't make the upcoming dates? Leave your email to get notified when we announce our next scheduled slots or school-year programming.</p>
+                        
+                        <div class="space-y-1.5 pt-2 text-xs sm:text-sm text-slate-700 border-t border-slate-100">
+                            <p><i class="fa-solid fa-bell w-5 text-slate-400"></i> Be the first to pick seasonal time blocks</p>
+                            <p><i class="fa-solid fa-map-pin w-5 text-slate-400"></i> Request programming for your specific city/school</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-slate-50 border border-dashed border-slate-300 rounded-xl h-60 flex flex-col items-center justify-center p-4 text-center text-slate-400">
+                        <i class="fa-solid fa-envelope-open-text text-2xl mb-1 text-slate-300"></i>
+                        <span class="text-xs font-semibold text-slate-700">[ Future Interest List Form Embed ]</span>
+                        <p class="text-[11px] text-slate-400 mt-1 max-w-[200px]">Paste your general mailing list signup or fallback interest form iframe here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <h2 class="text-3xl font-heading font-bold text-slate-900 text-center">Frequently Asked Questions</h2>
+
+            <div class="space-y-3">
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 text-sm sm:text-base">
+                        <span>Who exactly teaches the workshops?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-slate-600 text-xs sm:text-sm border-t border-slate-50 pt-2 leading-relaxed">
+                        Workshops are run by high school students who are part of the Market Minds organization. All lessons and structural concepts are prepared alongside guidance resources to ensure they are 100% accurate.
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 text-sm sm:text-base">
+                        <span>Does my child need any background knowledge?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-slate-600 text-xs sm:text-sm border-t border-slate-50 pt-2 leading-relaxed">
+                        No background knowledge is required. We start right at the beginning with simple, intuitive terms that anyone can understand, regardless of experience.
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <button class="faq-toggle w-full px-5 py-4 text-left flex justify-between items-center font-semibold text-slate-900 hover:bg-slate-50 text-sm sm:text-base">
+                        <span>Is it completely free?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-5 pb-4 text-slate-600 text-xs sm:text-sm border-t border-slate-50 pt-2 leading-relaxed">
+                        Yes. Market Minds is a student nonprofit initiative. We do not ask for payment details, credit cards, or fee collections.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 pt-12 pb-6 border-t border-slate-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 md:grid-cols-12 pb-8 border-b border-slate-900">
+            <div class="md:col-span-6 space-y-3">
+                <a href="#home" class="inline-flex items-center space-x-2 bg-slate-900 p-2 rounded-xl border border-slate-800">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPmkSIqZmqr__OA_3CApZs-2OBxsBdHpA34SZaBkbl2YLKg2xKnoy0UUM29DNuWdRVesi_ERpEghaaMDhkU3tYeJHTqejHNvKgcLL5krliTaYGX3wx4Hjz1yPdZM-U8u63T8ha9jCiC62_b17nmEpc=w2495-h393-s-no-gm?authuser=0" alt="Market Minds Logo" class="h-7 w-auto object-contain">
+                    <span class="text-white font-heading font-bold text-sm pr-1">Market Minds</span>
+                </a>
+                <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+                    A student nonprofit dedicated to introducing personal finance, saving choices, and economics to younger generations in plain English.
+                </p>
+            </div>
+            <div class="md:col-span-6 space-y-3 text-xs md:text-right">
+                <h4 class="text-white font-semibold uppercase tracking-wider">Contact & Socials</h4>
+                <p><i class="fa-solid fa-envelope text-[#C4E5F3] mr-1"></i> info@marketminds-example.org</p>
+                <div class="flex justify-start md:justify-end space-x-4 text-base pt-1">
+                    <a href="#" aria-label="Instagram" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok" class="hover:text-white"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row justify-between text-[11px] text-slate-600 gap-2">
+            <p>© 2026 Market Minds Organization. All rights reserved.</p>
+            <p>Built with plain language for young leaders.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Close mobile dropdown when a navigation link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // FAQ simple open/close accordion toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+    </script>
+</body>
+</html>
